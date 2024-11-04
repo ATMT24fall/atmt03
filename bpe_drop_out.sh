@@ -1,12 +1,12 @@
 # ‼️ change this
-OUTPUT_DIR=./data/en-fr/prepared_bpe_32000_15_0_1
+OUTPUT_DIR=./data/en-fr/prepared_bpe_32000_15_0_15
 
 # Define BPE operations and vocabulary threshold variables
 
 # ‼️ change this
 BPE_OPERATIONS=32000
 VOCAB_THRESHOLD=15
-DROP_OUT=0.1
+DROP_OUT=0.15
 
 # Create output directory if it doesn't exist
 mkdir -p $OUTPUT_DIR

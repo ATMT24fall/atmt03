@@ -2,7 +2,7 @@
 set -e
 
 # ‼️ change this
-DATA_DIR="data/en-fr/prepared_bpe_32000_15_0_1"
+DATA_DIR="data/en-fr/prepared_bpe_48000_15"
 # Get BPE suffix from DATA_DIR
 BPE_SUFFIX=$(echo $DATA_DIR | grep -o 'bpe_[0-9_]*')
 
