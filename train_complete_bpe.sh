@@ -24,7 +24,6 @@ python train.py \
     --source-lang fr \
     --target-lang en \
     --save-dir "$CHECKPOINTS_DIR" \
-    --train-on-tiny
 
 # Translate using trained model
 echo "Translating test set..."

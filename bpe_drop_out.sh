@@ -7,6 +7,7 @@ OUTPUT_DIR=./data/en-fr/prepared_bpe_32000_15_0_1
 BPE_OPERATIONS=32000
 VOCAB_THRESHOLD=15
 DROP_OUT=0.1
+
 # Create output directory if it doesn't exist
 mkdir -p $OUTPUT_DIR
 
@@ -17,7 +18,7 @@ subword-nmt learn-joint-bpe-and-vocab \
     -o $OUTPUT_DIR/codes.txt \
     --write-vocabulary $OUTPUT_DIR/vocab.en $OUTPUT_DIR/vocab.fr
 
-# Apply BPE to train files
+# Apply BPE to train files WITH dropout
 subword-nmt apply-bpe \
     -c $OUTPUT_DIR/codes.txt \
     --dropout $DROP_OUT \
@@ -34,7 +35,7 @@ subword-nmt apply-bpe \
     < ./data/en-fr/preprocessed/train.fr \
     > $OUTPUT_DIR/train.fr
 
-# Apply BPE to tiny_train
+# Apply BPE to tiny_train WITHOUT dropout
 subword-nmt apply-bpe \
     -c $OUTPUT_DIR/codes.txt \
     --vocabulary $OUTPUT_DIR/vocab.en \
@@ -49,7 +50,7 @@ subword-nmt apply-bpe \
     < ./data/en-fr/preprocessed/tiny_train.fr \
     > $OUTPUT_DIR/tiny_train.fr
 
-# Apply BPE to valid
+# Apply BPE to valid WITHOUT dropout
 subword-nmt apply-bpe \
     -c $OUTPUT_DIR/codes.txt \
     --vocabulary $OUTPUT_DIR/vocab.en \
@@ -64,7 +65,7 @@ subword-nmt apply-bpe \
     < ./data/en-fr/preprocessed/valid.fr \
     > $OUTPUT_DIR/valid.fr
 
-# Apply BPE to test files
+# Apply BPE to test files WITHOUT dropout
 subword-nmt apply-bpe \
     -c $OUTPUT_DIR/codes.txt \
     --vocabulary $OUTPUT_DIR/vocab.en \
