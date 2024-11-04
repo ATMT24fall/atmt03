@@ -1,12 +1,12 @@
 # ‼️ change this
-OUTPUT_DIR=./data/en-fr/prepared_bpe_32000_15_0_1
+OUTPUT_DIR=./data/en-fr/prepared_bpe_32000_15
 
 # Define BPE operations and vocabulary threshold variables
 
 # ‼️ change this
 BPE_OPERATIONS=32000
 VOCAB_THRESHOLD=15
-DROP_OUT=0.1
+
 # Create output directory if it doesn't exist
 mkdir -p $OUTPUT_DIR
 
@@ -20,7 +20,6 @@ subword-nmt learn-joint-bpe-and-vocab \
 # Apply BPE to train files
 subword-nmt apply-bpe \
     -c $OUTPUT_DIR/codes.txt \
-    --dropout $DROP_OUT \
     --vocabulary $OUTPUT_DIR/vocab.en \
     --vocabulary-threshold $VOCAB_THRESHOLD \
     < ./data/en-fr/preprocessed/train.en \
@@ -28,7 +27,6 @@ subword-nmt apply-bpe \
 
 subword-nmt apply-bpe \
     -c $OUTPUT_DIR/codes.txt \
-    --dropout $DROP_OUT \
     --vocabulary $OUTPUT_DIR/vocab.fr \
     --vocabulary-threshold $VOCAB_THRESHOLD \
     < ./data/en-fr/preprocessed/train.fr \
