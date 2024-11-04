@@ -8,21 +8,21 @@ in terminal, this will generate data folder with custom name in 'data/en-fr'.(e.
 
 ### train on tiny or complete by running
 ```bash
-bash train_tiny.sh
+bash train_tiny_bpe.sh
 ``` 
 or 
 ```bash
-"bash train_complete.sh
+bash train_complete_bpe.sh
 ```
 
 ## Steps to train the model with different learning rate
 
-### change variables `lr` in `train_translate_evaluate_tiny.sh` or `train_translate_evaluate.sh`, adn run 
+### change variables `lr` in `train_tiny_lr.sh` or `train_complete_lr.sh`, adn run 
 ```bash
-bash train_translate_evaluate_tiny.sh
+bash train_tiny_lr.sh
 ```
 or 
 
 ```bash
-bash train_translate_evaluate.sh
+bash train_complete_lr.sh
 ```
