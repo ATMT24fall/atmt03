@@ -1,0 +1,13 @@
+BLEU Score Evaluation Results - Tue Nov  5 03:01:37 CET 2024
+{
+ "name": "BLEU",
+ "score": 19.8,
+ "signature": "nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.4.3",
+ "verbose_score": "49.6/25.2/14.7/8.3 (BP = 1.000 ratio = 1.173 hyp_len = 4567 ref_len = 3892)",
+ "nrefs": "1",
+ "case": "mixed",
+ "eff": "no",
+ "tok": "13a",
+ "smooth": "exp",
+ "version": "2.4.3"
+}

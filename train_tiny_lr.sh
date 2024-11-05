@@ -2,7 +2,7 @@
 
 # ‼️ change this
 # Set the learning rate
-lr=0.0005
+lr=0.0003
 echo "Learning rate set to $lr"
 
 baseline_dir="assignment03/baseline/lr_${lr}_tiny/"
