@@ -7,7 +7,7 @@ DATA_DIR="data/en-fr/prepared_bpe_48000_15"
 BPE_SUFFIX=$(echo $DATA_DIR | grep -o 'bpe_[0-9_]*')
 
 # Directory setup
-BASE_DIR="assignment03/baseline/${BPE_SUFFIX}"
+BASE_DIR="assignment03/${BPE_SUFFIX}"
 CHECKPOINTS_DIR="$BASE_DIR/checkpoints"
 TRANSLATIONS_FILE="$BASE_DIR/translations.txt"
 POSTPROCESSED_FILE="$BASE_DIR/translations.p.txt"
@@ -17,8 +17,8 @@ mkdir -p "$CHECKPOINTS_DIR"
 
 echo "Starting tiny training pipeline..."
 
-# Train the model on tiny dataset
-echo "Training model on tiny dataset..."
+# Train the model on complete dataset
+echo "Training model on complete dataset..."
 python train.py \
     --data "$DATA_DIR" \
     --source-lang fr \

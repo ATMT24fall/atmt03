@@ -7,7 +7,7 @@ DATA_DIR="data/en-fr/prepared_bpe_32000_15_0_1"
 BPE_SUFFIX=$(echo $DATA_DIR | grep -o 'bpe_[0-9_]*')
 
 # Directory setup
-BASE_DIR="assignment03/baseline/${BPE_SUFFIX}_tiny"
+BASE_DIR="assignment03/${BPE_SUFFIX}_tiny"
 CHECKPOINTS_DIR="$BASE_DIR/checkpoints"
 TRANSLATIONS_FILE="$BASE_DIR/translations.txt"
 POSTPROCESSED_FILE="$BASE_DIR/translations.p.txt"
